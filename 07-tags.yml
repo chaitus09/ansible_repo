@@ -1,1 +1,13 @@
 #hello
+- name: demo on tags
+  hosts: localhost
+  tasks:
+    - name: Vegetables
+      ansible.builtin.debug:
+        msg: vegetables
+      tags: vegetables
+
+    - name: Fruits
+      ansible.builtin.debug:
+        msg: fruits
+      tags: fruits
